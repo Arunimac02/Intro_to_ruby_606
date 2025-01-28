@@ -49,7 +49,7 @@ end
 def starts_with_consonant?(string)
   # YOUR CODE HERE
   return false if string.empty?
-  return true if string[0].downcase =~ /[a-z]/ && string[0].downcase !~ /[^aeiou]/
+  return true if string[0].downcase =~ /[a-z]/ && string[0].downcase =~ /[^aeiou]/
   return false
 end
 
