@@ -67,6 +67,8 @@ end
 class BookInStock
   # YOUR CODE HERE
   attr_accessor :isbn, :price
+
+  # constructor
   def initialize(isbn, price)
     if !isbn.empty? and price > 0
       @isbn = isbn
@@ -75,4 +77,10 @@ class BookInStock
       raise ArgumentError 
     end 
   end
+
+  # method price_as_string
+  def price_as_string
+    return "$%0.2f" % [@price]
+  end
+
 end
