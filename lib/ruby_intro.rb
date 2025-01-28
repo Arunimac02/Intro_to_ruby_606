@@ -55,7 +55,7 @@ end
 
 def binary_multiple_of_4?(string)
   # YOUR CODE HERE
-  0
+  return false if string !~ /\A[01]+\Z/
 end
 
 # Part 3
