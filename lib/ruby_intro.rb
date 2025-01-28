@@ -56,6 +56,10 @@ end
 def binary_multiple_of_4?(string)
   # YOUR CODE HERE
   return false if string !~ /\A[01]+\Z/
+  #number = string.to_i
+  str = string[string.length - 1] + string[string.length - 2]
+  return false if string.to_i % 4 != 0 and str.to_i % 4 != 0
+  true
 end
 
 # Part 3
