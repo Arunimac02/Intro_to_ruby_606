@@ -70,12 +70,30 @@ class BookInStock
 
   # constructor
   def initialize(isbn, price)
-    if !isbn.empty? and price > 0
-      @isbn = isbn
-      @price = price
-    else 
-      raise ArgumentError 
-    end 
+    self.isbn = isbn
+    self.price = price
+  end
+
+  # getter for isbn
+  def isbn 
+    @isbn
+  end
+  
+  # getter for price
+  def price
+    @price
+  end
+  
+  # setter for isbn
+  def isbn=(isbn)
+    raise ArgumentError if isbn.empty? 
+    @isbn = isbn 
+  end
+
+  # setter for price
+  def price=(price)
+    raise ArgumentError if price <= 0
+    @price = price 
   end
 
   # method price_as_string
