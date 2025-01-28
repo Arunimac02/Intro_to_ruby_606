@@ -29,6 +29,14 @@ end
 def sum_to_n?(arr, number)
   # YOUR CODE HERE
   return false if arr.empty? or arr.length == 1
+  for i in arr do
+    for j in arr do
+      unless arr.find_index(i) == arr.find_index(j)
+        return true if i + j == number
+      end
+    end 
+  end
+  return false
 end
 
 # Part 2
