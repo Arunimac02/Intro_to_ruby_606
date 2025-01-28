@@ -43,7 +43,7 @@ end
 
 def hello(name)
   # YOUR CODE HERE
-  0
+  return "Hello, " + name
 end
 
 def starts_with_consonant?(string)
